@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Shaik M Subhani</title>
+    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <header class="text-center py-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-cyan-400 drop-shadow-lg">Projects</h1>
+    </header>
+    <nav class="flex justify-center gap-8 bg-gray-800 py-4 shadow-lg text-lg">
+        <a href="/" class="hover:text-pink-400 transition">Home</a>
+        <a href="/experience/" class="hover:text-pink-400 transition">Experience</a>
+        <a href="/skills/" class="hover:text-pink-400 transition">Skills</a>
+        <a href="/projects/" class="hover:text-pink-400 transition">Projects</a>
+        <a href="/contact/" class="hover:text-pink-400 transition">Contact</a>
+    </nav>
+    <main class="max-w-2xl mx-auto mt-10 bg-gray-800 rounded-xl shadow-xl p-8">
+        <section class="space-y-8">
+            <div class="bg-gray-900 border-l-4 border-cyan-400 rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl text-pink-400 font-bold mb-2">E-Commerce Analytics Dashboard</h2>
+                <ul class="list-disc list-inside text-cyan-200 space-y-1">
+                    <li>Built Django-powered dashboard to monitor real-time sales and inventory</li>
+                    <li>Integrated Memcached to enhance query speed and server performance</li>
+                </ul>
+            </div>
+            <div class="bg-gray-900 border-l-4 border-cyan-400 rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl text-pink-400 font-bold mb-2">RID App - Resource Intelligence and Deployment</h2>
+                <ul class="list-disc list-inside text-cyan-200 space-y-1">
+                    <li>Designed containerized services using Docker and deployed on AWS EC2</li>
+                    <li>Conducted functional testing and tracked development using version control</li>
+                </ul>
+            </div>
+            <div class="bg-gray-900 border-l-4 border-cyan-400 rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl text-pink-400 font-bold mb-2">Document Automation System</h2>
+                <ul class="list-disc list-inside text-cyan-200 space-y-1">
+                    <li>Automated document classification with Python, AWS Lambda and S3</li>
+                    <li>Improved processing accuracy and eliminated repetitive manual tasks</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html> 
