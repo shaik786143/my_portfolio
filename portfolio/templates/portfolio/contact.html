@@ -5,33 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Shaik M Subhani</title>
-    <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body class="bg-gray-900 text-white min-h-screen">
+<body>
     <header class="text-center py-10">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-cyan-400 drop-shadow-lg">Contact Me</h1>
+        <h1 class="text-4xl text-md-5xl font-extrabold text-cyan-400 drop-shadow-lg">Contact Me</h1>
     </header>
-    <nav class="flex justify-center gap-8 bg-gray-800 py-4 shadow-lg text-lg">
-        <a href="/" class="hover:text-pink-400 transition">Home</a>
-        <a href="/experience/" class="hover:text-pink-400 transition">Experience</a>
-        <a href="/skills/" class="hover:text-pink-400 transition">Skills</a>
-        <a href="/projects/" class="hover:text-pink-400 transition">Projects</a>
-        <a href="/contact/" class="hover:text-pink-400 transition">Contact</a>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/experience/">Experience</a>
+        <a href="/skills/">Skills</a>
+        <a href="/projects/">Projects</a>
+        <a href="/contact/">Contact</a>
     </nav>
-    <main class="max-w-2xl mx-auto mt-10 bg-gray-800 rounded-xl shadow-xl p-8">
+    <main class="main-content">
         <section>
             {% if message %}
-                <div class="bg-cyan-400 text-gray-900 rounded-lg p-4 mb-4 text-center font-bold shadow">{{ message }}</div>
+                <div class="success-message">{{ message }}</div>
             {% endif %}
-            <form method="post" class="flex flex-col gap-4">
+            <form method="post" class="form-container">
                 {% csrf_token %}
-                <label for="name" class="text-cyan-300 font-semibold">Name:</label>
-                <input type="text" id="name" name="name" required class="bg-gray-900 border border-cyan-400 text-cyan-200 rounded-lg px-4 py-2 focus:border-pink-400 outline-none transition">
-                <label for="email" class="text-cyan-300 font-semibold">Email:</label>
-                <input type="email" id="email" name="email" required class="bg-gray-900 border border-cyan-400 text-cyan-200 rounded-lg px-4 py-2 focus:border-pink-400 outline-none transition">
-                <label for="message" class="text-cyan-300 font-semibold">Message:</label>
-                <textarea id="message" name="message" required class="bg-gray-900 border border-cyan-400 text-cyan-200 rounded-lg px-4 py-2 focus:border-pink-400 outline-none transition"></textarea>
-                <button type="submit" class="bg-cyan-400 text-gray-900 font-bold rounded-lg px-6 py-2 mt-2 shadow hover:bg-pink-400 hover:text-white transition">Send Message</button>
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message" class="form-label">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
